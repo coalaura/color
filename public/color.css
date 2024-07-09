@@ -144,3 +144,32 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
+
+.outputs {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.output {
+    height: 30px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.output.invalid {
+    border-color: #c32222;
+    background: #4b2a2a;
+}
+
+#output_hsl {
+    width: 200px;
+}
+
+#output_rgb {
+    width: 190px;
+}
+
+#output_hex {
+    width: 90px;
+}
