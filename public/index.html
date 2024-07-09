@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="color.css" />
+
+        <title>ᓚᘏᗢ</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="spaces">
+                <button data-space="rgb" class="space">RGB</button>
+                <button data-space="hsl" class="space active">HSL</button>
+                <button data-space="hsv" class="space">HSV</button>
+                <button data-space="hwb" class="space">HWB</button>
+                <button data-space="cmy" class="space">CMY</button>
+                <button data-space="lab" class="space">LAB</button>
+                <button data-space="lch" class="space">LCH</button>
+                <button data-space="xyz" class="space">XYZ</button>
+            </div>
+
+            <div class="colors">
+                <div id="color">
+                    <canvas></canvas>
+                </div>
+
+                <div class="sliders">
+                    <div class="slider" id="x">
+                        <div class="canvas">
+                            <div class="knob"></div>
+                            <canvas></canvas>
+                        </div>
+
+                        <input type="number" />
+                    </div>
+                    <div class="slider" id="y">
+                        <div class="canvas">
+                            <div class="knob"></div>
+                            <canvas></canvas>
+                        </div>
+
+                        <input type="number" />
+                    </div>
+                    <div class="slider" id="z">
+                        <div class="canvas">
+                            <div class="knob"></div>
+                            <canvas></canvas>
+                        </div>
+
+                        <input type="number" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="color.js"></script>
+    </body>
+</html>

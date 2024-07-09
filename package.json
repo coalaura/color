@@ -1,0 +1,16 @@
+{
+  "name": "color",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/color.js --bundle --outfile=public/color.js --minify",
+    "watch": "esbuild src/color.js --bundle --outfile=public/color.js --watch"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "0.23.0"
+  },
+  "dependencies": {
+    "color-space": "^2.0.1"
+  }
+}

@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: #212529;
+    color: #f1f2f4;
+    height: 100%;
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+    font-size: 15px;
+}
+
+.container {
+    background: #495057;
+    padding: 15px 20px;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
+}
+
+.spaces {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.space {
+    display: block;
+    border: 2px solid #212529;
+    background: #343A40;
+    color: #f1f2f4;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px 8px;
+    transition: 250ms;
+}
+
+.space:hover {
+    background: #40474f;
+    border-color: #292e33;
+}
+
+.space.active {
+    background: #ADB5BD;
+    color: #212529;
+    border-color: #343A40;
+}
+
+.space.active:hover {
+    background: #85919d;
+}
+
+.colors {
+    display: flex;
+    gap: 10px;
+}
+
+#color {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+#color.out-of-gamut::after {
+    content: "Outside of sRGB";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    white-space: nowrap;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.sliders {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 400px;
+}
+
+.slider {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    gap: 10px;
+}
+
+.canvas {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+input {
+    background: #343A40;
+    color: #f1f2f4;
+    font-family: inherit;
+    border: 2px solid #212529;
+    height: 100%;
+    padding: 0 5px;
+    width: 45px;
+    text-align: right;
+    outline: none;
+}
+
+.knob {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: 0;
+    transform: translateX(-50%);
+    background: #f1f2f4;
+    width: 8px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
